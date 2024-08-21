@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Bg - Colors */
+  --bg-white: hsl(0, 0%, 100%);
+  --bg-black-alpha-20: hsla(0, 0%, 0%, 0.2);
+  --bg-lavender-blush: hsl(0, 100%, 98%);
+  --bg-majorelle-blue: hsl(249, 95%, 63%);
+  --bg-ocean-blue: hsl(249, 63%, 54%);
+  --bg-majorelle-blue-alpha-5: hsla(249, 95%, 63%, 0.05);
+  --bg-misty-rose: hsl(0, 100%, 95%);
+  --bg-red-salsa: hsl(357, 94%, 63%);
+  --bg-red-salsa-alpha-5: hsla(357, 94%, 63%, 0.05);
+  --bg-english-vermillion: hsl(357, 64%, 53%);
+  --bg-chrome-yellow-alpha-5: hsla(40, 100%, 50%, 0.05);
+  --bg-sunglow-alpha-10: hsla(48, 100%, 50%, 0.1);
+  --bg-gainsboro: hsl(0, 0%, 85%);
+  /* Text Colors */
+  --text-white: hsl(0, 0%, 100%);
+  --text-gunmetal: hsl(209, 40%, 14%);
+  --text-light-coral: hsl(357, 96%, 73%);
+  --text-granite-gray: hsl(210, 4%, 38%);
+  --text-majorelle-blue: hsl(249, 95%, 63%);
+  --text-sunglow: hsl(48, 100%, 50%);
+  /* Border color */
+  --border-gainsboro: hsl(0, 1%, 85%);
+  /* Transition */
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease;
+  --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+}
+
+html,
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+section {
+  padding: 0 1rem;
+  margin-bottom: 5rem;
+  scroll-margin-top: 6rem;
+}
+
+header.NavBar nav {
+  position: fixed;
+  /* -wabkit-position: sticky; */
+  top: 0;
+}
+
+.sectionHeader {
+  @apply flex items-center justify-center flex-col text-center uppercase;
+}
+
+.sectionHeader span {
+  @apply text-ocean-blue text-sm;
+}
+
+.sectionHeader h1 {
+  @apply lg:text-3xl mt-2;
+}
+
+.Links {
+  @apply lg:hidden block absolute w-full left-0 top-24 bg-white shadow-md p-3;
+}
+
+.switchers {
+  @apply flex flex-col border-t-4 pt-5 *:pb-3;
+}
+
+.btn {
+  @apply block mx-auto px-5 py-2 bg-majorelle-blue text-text-white rounded-3xl shadow-md shadow-majorelle-blue-alpha-5;
+}
+
+.customTransition3 {
+  @apply transition-all duration-300 ease-in-out;
+}
